@@ -1,0 +1,11 @@
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\bin\Debug\net8.0\AWF.Repository.deps.json
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\bin\Debug\net8.0\AWF.Repository.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\bin\Debug\net8.0\AWF.Repository.pdb
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.AssemblyInfoInputs.cache
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.AssemblyInfo.cs
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\refint\AWF.Repository.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.pdb
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\ref\AWF.Repository.dll
