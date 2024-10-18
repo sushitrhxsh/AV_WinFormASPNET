@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "36i8/WvJKuM=",
+  "dgSpecHash": "uo7jX/kWETU=",
   "success": true,
   "projectFilePath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\AWF.Services.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,8 @@
     "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.2.0\\microsoft.data.sqlclient.sni.runtime.5.2.0.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.identity.client\\4.60.3\\microsoft.identity.client.4.60.3.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.identity.client.extensions.msal\\4.60.3\\microsoft.identity.client.extensions.msal.4.60.3.nupkg.sha512",
@@ -42,12 +44,5 @@
     "C:\\Users\\Alex FS\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error al obtener los datos de vulnerabilidad del paquete: No se puede cargar el índice de servicio del origen https://api.nuget.org/v3/index.json."
-    }
-  ]
+  "logs": []
 }

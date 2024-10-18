@@ -9,3 +9,5 @@ C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repos
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\refint\AWF.Repository.dll
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.pdb
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\ref\AWF.Repository.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.csproj.AssemblyReference.cache
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Repository\obj\Debug\net8.0\AWF.Repository.sourcelink.json

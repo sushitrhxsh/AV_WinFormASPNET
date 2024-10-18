@@ -1,4 +1,11 @@
+using AWF.Repository;
+using AWF.Repository.Implementation;
+using AWF.Repository.Interfaces;
+using AWF.Services;
+using AWF.Services.Implementation;
+using AWF.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace AWF.Presentation;
@@ -15,11 +22,23 @@ static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
         var host = CreateHostBuilder().Build();
-        Application.Run(new Form1());
+        var formService = host.Services.GetRequiredService<Form1>();
+
+        Application.Run(formService);
     }
 
     static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder()
-        .ConfigureAppConfiguration((context, config) => {
+        .ConfigureAppConfiguration((context, config) => 
+        {
             config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+        })
+        .ConfigureServices((context,services) => 
+        {
+            //Repositories
+            services.InyeccionDependenciasRepository();
+            //Services
+            services.InyeccionDependenciasService();
+
+            services.AddTransient<Form1>();
         });
 }

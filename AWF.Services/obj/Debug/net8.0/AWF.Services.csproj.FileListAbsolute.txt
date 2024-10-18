@@ -13,3 +13,4 @@ C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Servi
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Services\obj\Debug\net8.0\refint\AWF.Services.dll
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Services\obj\Debug\net8.0\AWF.Services.pdb
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Services\obj\Debug\net8.0\ref\AWF.Services.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Services\obj\Debug\net8.0\AWF.Services.sourcelink.json
