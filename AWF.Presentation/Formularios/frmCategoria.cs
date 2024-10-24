@@ -33,11 +33,10 @@ namespace AWF.Presentation.Formularios
 
             foreach (var tab in TabsMenu)
             {
-                if (tab.Name != tabName) {
+                if (tab.Name != tabName)
                     tab.Parent = null;
-                } else {
+                else
                     tab.Parent = tabControlMain;
-                }
             }
         }
 
@@ -56,7 +55,7 @@ namespace AWF.Presentation.Formularios
             }).ToList();
 
             dgvCategorias.AutoGenerateColumns = true;
-            dgvCategorias.DataSource = listaVM;
+            dgvCategorias.DataSource          = listaVM;
 
             dgvCategorias.Columns["IdCategoria"].Visible = false;
             dgvCategorias.Columns["IdMedida"].Visible    = false;

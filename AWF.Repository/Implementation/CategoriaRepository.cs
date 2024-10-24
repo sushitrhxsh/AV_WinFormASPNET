@@ -32,11 +32,11 @@ namespace AWF.Repository.Implementation
                     {
                         lista.Add(new Categoria{
                             IdCategoria = Convert.ToInt32(dr["IdCategoria"]),
-                            Nombre = dr["Nombre"].ToString(),
-                            Activo = Convert.ToInt32(dr["Activo"]),
-                            RefMedida = new Medida{
+                            Nombre      = dr["Nombre"].ToString(),
+                            Activo      = Convert.ToInt32(dr["Activo"]),
+                            RefMedida   = new Medida{
                                 IdMedida = Convert.ToInt32(dr["IdMedida"]),
-                                Nombre = dr["NombreMedida"].ToString()
+                                Nombre   = dr["NombreMedida"].ToString()
                             }
                         });
                     }
@@ -54,7 +54,7 @@ namespace AWF.Repository.Implementation
                 conn.Open();
                 var cmd = new SqlCommand("sp_crearCategoria",conn);
 
-                cmd.Parameters.AddWithValue("@Nombre",modelo.Nombre);
+                cmd.Parameters.AddWithValue("@Nombre",  modelo.Nombre);
                 cmd.Parameters.AddWithValue("@IdMedida",modelo.RefMedida.IdMedida);
                 cmd.Parameters.Add("@MsjError",SqlDbType.VarChar,100).Direction = ParameterDirection.Output;
                 
@@ -79,10 +79,10 @@ namespace AWF.Repository.Implementation
                 conn.Open();
                 var cmd = new SqlCommand("sp_editarCategoria",conn);
 
-                cmd.Parameters.AddWithValue("@IdCategoria",modelo.IdCategoria);
-                cmd.Parameters.AddWithValue("@Nombre",modelo.Nombre);
-                cmd.Parameters.AddWithValue("@IdMedida",modelo.RefMedida.IdMedida);
-                cmd.Parameters.AddWithValue("@Activo",modelo.Activo);
+                cmd.Parameters.AddWithValue("@IdCategoria", modelo.IdCategoria);
+                cmd.Parameters.AddWithValue("@Nombre",      modelo.Nombre);
+                cmd.Parameters.AddWithValue("@IdMedida",    modelo.RefMedida.IdMedida);
+                cmd.Parameters.AddWithValue("@Activo",      modelo.Activo);
                 cmd.Parameters.Add("@MsjError",SqlDbType.VarChar,100).Direction = ParameterDirection.Output;
 
                 cmd.CommandType = CommandType.StoredProcedure;

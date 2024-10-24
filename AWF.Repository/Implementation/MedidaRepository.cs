@@ -11,7 +11,7 @@ namespace AWF.Repository.Implementation
         
         private readonly Conexion _conexion;
         public MedidaRepository(Conexion conexion)
-    {
+        {
             _conexion = conexion;
         }
 
@@ -30,11 +30,11 @@ namespace AWF.Repository.Implementation
                     while(await dr.ReadAsync())
                     {
                         lista.Add(new Medida{
-                            IdMedida = Convert.ToInt32(dr["IdMedida"]),
-                            Nombre = dr["Nombre"].ToString(),
+                            IdMedida    = Convert.ToInt32(dr["IdMedida"]),
+                            Nombre      = dr["Nombre"].ToString(),
                             Abreviatura = dr["Abreviatura"].ToString(),
                             Equivalente = dr["Equivalente"].ToString(),
-                            Valor = Convert.ToInt32(dr["Valor"]),
+                            Valor       = Convert.ToInt32(dr["Valor"]),
                         });
                     }
                 }

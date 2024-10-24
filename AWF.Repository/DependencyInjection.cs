@@ -10,8 +10,9 @@ namespace AWF.Repository
         public static void InyeccionDependenciasRepository(this IServiceCollection services)
         {
             services.AddSingleton<Conexion>();
-            services.AddTransient<IMedidaRepository,MedidaRepository>();
-            services.AddTransient<ICategoriaRepository,CategoriaRepository>();
+            services.AddTransient<IMedidaRepository,    MedidaRepository>();
+            services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+            services.AddTransient<IProductoRepository,  ProductoRepository>();
         }
     }
 }
