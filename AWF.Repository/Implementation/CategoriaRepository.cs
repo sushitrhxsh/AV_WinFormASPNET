@@ -33,7 +33,7 @@ namespace AWF.Repository.Implementation
                         lista.Add(new Categoria{
                             IdCategoria = Convert.ToInt32(dr["IdCategoria"]),
                             Nombre = dr["Nombre"].ToString(),
-                            Activo = Convert.ToInt32(dr["Valor"]),
+                            Activo = Convert.ToInt32(dr["Activo"]),
                             RefMedida = new Medida{
                                 IdMedida = Convert.ToInt32(dr["IdMedida"]),
                                 Nombre = dr["NombreMedida"].ToString()

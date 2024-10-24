@@ -93,3 +93,4 @@ C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.prese
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\obj\Debug\net8.0-windows\AWF.Presentation.sourcelink.json
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Presentation\obj\Debug\net8.0-windows\AWF.Presentation.Formularios.frmCategoria.resources

@@ -1,3 +1,4 @@
+using AWF.Presentation.Formularios;
 using AWF.Repository;
 using AWF.Repository.Implementation;
 using AWF.Repository.Interfaces;
@@ -22,7 +23,7 @@ static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
         var host = CreateHostBuilder().Build();
-        var formService = host.Services.GetRequiredService<Form1>();
+        var formService = host.Services.GetRequiredService<frmCategoria>();
 
         Application.Run(formService);
     }
@@ -39,6 +40,6 @@ static class Program
             //Services
             services.InyeccionDependenciasService();
 
-            services.AddTransient<Form1>();
+            services.AddTransient<frmCategoria>();
         });
 }
