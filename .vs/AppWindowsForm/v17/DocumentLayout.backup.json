@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|c:\\users\\alex fs\\documents\\programacion\\.net\\windowform\\appwindowsform\\awf.presentation\\formularios\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|solutionrelative:awf.presentation\\formularios\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|c:\\users\\alex fs\\documents\\programacion\\.net\\windowform\\appwindowsform\\awf.presentation\\formularios\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|solutionrelative:awf.presentation\\formularios\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\awf.presentation\\formularios\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|solutionrelative:awf.presentation\\formularios\\frmcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\awf.presentation\\formularios\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|solutionrelative:awf.presentation\\formularios\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,26 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmCategoria.cs",
-              "RelativeDocumentMoniker": "AWF.Presentation\\Formularios\\frmCategoria.cs",
-              "ToolTip": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmCategoria.cs",
-              "RelativeToolTip": "AWF.Presentation\\Formularios\\frmCategoria.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Title": "frmProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmProducto.cs",
+              "RelativeDocumentMoniker": "AWF.Presentation\\Formularios\\frmProducto.cs",
+              "ToolTip": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmProducto.cs",
+              "RelativeToolTip": "AWF.Presentation\\Formularios\\frmProducto.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAAAMAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T20:06:50.882Z",
+              "WhenOpened": "2024-10-25T20:40:01.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmCategoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmCategoria.cs",
-              "RelativeDocumentMoniker": "AWF.Presentation\\Formularios\\frmCategoria.cs",
-              "ToolTip": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmCategoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "AWF.Presentation\\Formularios\\frmCategoria.cs [Dise\u00F1o]",
+              "Title": "frmProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmProducto.cs",
+              "RelativeDocumentMoniker": "AWF.Presentation\\Formularios\\frmProducto.cs",
+              "ToolTip": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AWF.Presentation\\Formularios\\frmProducto.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T20:10:17.81Z"
+              "WhenOpened": "2024-10-25T20:08:10.243Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

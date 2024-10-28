@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWF.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f69ca593ef683a833264dad0fceb5d6b5c442b0c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06c5c51f30335206eef2c6bfaff3e5f460c30ef8")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWF.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWF.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

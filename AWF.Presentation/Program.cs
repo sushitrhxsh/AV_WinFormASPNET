@@ -23,7 +23,7 @@ static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
         var host = CreateHostBuilder().Build();
-        var formService = host.Services.GetRequiredService<frmCategoria>();
+        var formService = host.Services.GetRequiredService<frmProducto>();
 
         Application.Run(formService);
     }
@@ -41,5 +41,6 @@ static class Program
             services.InyeccionDependenciasService();
 
             services.AddTransient<frmCategoria>();
+            services.AddTransient<frmProducto>();
         });
 }
