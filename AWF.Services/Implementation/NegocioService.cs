@@ -1,9 +1,10 @@
 using AWF.Repository.Entities;
 using AWF.Repository.Interfaces;
+using AWF.Services.Interfaces;
 
 namespace AWF.Services.Implementation
 {
-    public class NegocioService : INegocioRepository
+    public class NegocioService : INegocioService
     {
 
         private readonly INegocioRepository _negocioRepository;
