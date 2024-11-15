@@ -63,7 +63,7 @@ namespace AWF.Repository.Implementation
                 cmd.Parameters.AddWithValue("@PrecioCompra",modelo.PrecioCompra);
                 cmd.Parameters.AddWithValue("@PrecioVenta", modelo.PrecioVenta);
                 cmd.Parameters.AddWithValue("@Cantidad",    modelo.Cantidad);
-                cmd.Parameters.AddWithValue("@IdCategoria", modelo.RefCategoria.IdCategoria);
+                cmd.Parameters.AddWithValue("@IdCategoria", modelo.RefCategoria!.IdCategoria);
                 cmd.Parameters.Add("@MsjError",SqlDbType.VarChar,100).Direction = ParameterDirection.Output;
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -93,7 +93,7 @@ namespace AWF.Repository.Implementation
                 cmd.Parameters.AddWithValue("@PrecioCompra",modelo.PrecioCompra);
                 cmd.Parameters.AddWithValue("@PrecioVenta", modelo.PrecioVenta);
                 cmd.Parameters.AddWithValue("@Cantidad",    modelo.Cantidad);
-                cmd.Parameters.AddWithValue("@IdCategoria", modelo.RefCategoria.IdCategoria);
+                cmd.Parameters.AddWithValue("@IdCategoria", modelo.RefCategoria!.IdCategoria);
                 cmd.Parameters.AddWithValue("@Activo",      modelo.Activo);
                 cmd.Parameters.Add("@MsjError",SqlDbType.VarChar,100).Direction = ParameterDirection.Output;
 

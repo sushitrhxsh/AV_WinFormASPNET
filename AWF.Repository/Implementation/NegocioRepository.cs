@@ -1,4 +1,3 @@
-
 using System.Data;
 using AWF.Repository.DB;
 using AWF.Repository.Entities;
@@ -23,7 +22,7 @@ namespace AWF.Repository.Implementation
             using(var conn = _conexion.ObtenerSQLConexion())
             {
                 conn.Open();
-                var cmd = new SqlCommand("sp_obtenerCategoria",conn);
+                var cmd = new SqlCommand("sp_obtenerNegocio",conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using(var dr = await cmd.ExecuteReaderAsync())
@@ -35,6 +34,7 @@ namespace AWF.Repository.Implementation
                             RFC           = dr["RFC"].ToString(),
                             Direccion     = dr["Direccion"].ToString(),
                             NumCelular    = dr["NumCelular"].ToString(),
+                            Correo        = dr["Correo"].ToString(),
                             SimboloMoneda = dr["SimboloMoneda"].ToString(),
                             NombreLogo    = dr["NombreLogo"].ToString(),
                             UrlLogo       = dr["UrlLogo"].ToString()
@@ -55,6 +55,7 @@ namespace AWF.Repository.Implementation
                 cmd.Parameters.AddWithValue("@RazonSocial",     modelo.RazonSocial);
                 cmd.Parameters.AddWithValue("@RFC",             modelo.RFC);
                 cmd.Parameters.AddWithValue("@Direccion",       modelo.Direccion);
+                cmd.Parameters.AddWithValue("@Correo",          modelo.Correo);
                 cmd.Parameters.AddWithValue("@NumCelular",      modelo.NumCelular);
                 cmd.Parameters.AddWithValue("@SimboloMoneda",   modelo.SimboloMoneda);
                 cmd.Parameters.AddWithValue("@NombreLogo",      modelo.NombreLogo);

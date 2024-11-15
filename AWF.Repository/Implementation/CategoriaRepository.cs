@@ -55,7 +55,7 @@ namespace AWF.Repository.Implementation
                 var cmd = new SqlCommand("sp_crearCategoria",conn);
 
                 cmd.Parameters.AddWithValue("@Nombre",  modelo.Nombre);
-                cmd.Parameters.AddWithValue("@IdMedida",modelo.RefMedida.IdMedida);
+                cmd.Parameters.AddWithValue("@IdMedida",modelo.RefMedida!.IdMedida);
                 cmd.Parameters.Add("@MsjError",SqlDbType.VarChar,100).Direction = ParameterDirection.Output;
                 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -81,7 +81,7 @@ namespace AWF.Repository.Implementation
 
                 cmd.Parameters.AddWithValue("@IdCategoria", modelo.IdCategoria);
                 cmd.Parameters.AddWithValue("@Nombre",      modelo.Nombre);
-                cmd.Parameters.AddWithValue("@IdMedida",    modelo.RefMedida.IdMedida);
+                cmd.Parameters.AddWithValue("@IdMedida",    modelo.RefMedida!.IdMedida);
                 cmd.Parameters.AddWithValue("@Activo",      modelo.Activo);
                 cmd.Parameters.Add("@MsjError",SqlDbType.VarChar,100).Direction = ParameterDirection.Output;
 

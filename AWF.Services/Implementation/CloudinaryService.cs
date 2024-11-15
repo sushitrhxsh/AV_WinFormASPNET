@@ -16,9 +16,9 @@ namespace AWF.Services.Implementation
         {
             _configuration = configuration;
 
-            var CloudName = _configuration["Clodinary:CloudName"];
-            var ApiKey    = _configuration["Clodinary:ApiKey"];
-            var ApiSecret = _configuration["Clodinary:ApiSecret"];
+            var CloudName = _configuration["Cloudinary:CloudName"];
+            var ApiKey    = _configuration["Cloudinary:ApiKey"];
+            var ApiSecret = _configuration["Cloudinary:ApiSecret"];
 
             _cloudinary = new Cloudinary(new Account(CloudName,ApiKey,ApiSecret));
         }

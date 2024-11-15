@@ -49,7 +49,7 @@ namespace AWF.Presentation.Formularios
                 IdProducto   = item.IdProducto,
                 Codigo       = item.Codigo,
                 Descripcion  = item.Descripcion,
-                IdCategoria  = item.RefCategoria.IdCategoria,
+                IdCategoria  = item.RefCategoria!.IdCategoria,
                 Categoria    = item.RefCategoria.Nombre,
                 PrecioCompra = item.PrecioCompra.ToString("0.00"),
                 PrecioVenta  = item.PrecioVenta.ToString("0.00"),

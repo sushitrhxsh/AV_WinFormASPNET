@@ -48,7 +48,7 @@ namespace AWF.Presentation.Formularios
             {
                 IdCategoria = item.IdCategoria,
                 Nombre      = item.Nombre,
-                IdMedida    = item.RefMedida.IdMedida,
+                IdMedida    = item.RefMedida!.IdMedida,
                 Medida      = item.RefMedida.Nombre,
                 Activo      = item.Activo,
                 Habilitado  = item.Activo == 1 ? "Si" : "No"
@@ -131,7 +131,7 @@ namespace AWF.Presentation.Formularios
             {
                 var categoriaSeleccionada = (CategoriaVM)dgvCategorias.CurrentRow.DataBoundItem;
 
-                txbNombreEditar.Text = categoriaSeleccionada.Nombre.ToString();
+                txbNombreEditar.Text = categoriaSeleccionada.Nombre!.ToString();
                 cbbMedidaEditar.EstablecerValor(categoriaSeleccionada.IdMedida);
                 cbbHabilitado.EstablecerValor(categoriaSeleccionada.Activo);
 
