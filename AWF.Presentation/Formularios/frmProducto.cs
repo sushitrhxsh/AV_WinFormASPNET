@@ -120,27 +120,27 @@ namespace AWF.Presentation.Formularios
 
         private async void btnGuardarNuevo_Click(object sender, EventArgs e)
         {
-            if (txbCodigoNuevo.Text.Trim() == ""){
+            if (txbCodigoNuevo.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar el codigo");
                 return;
             }
 
-            if (txbDescripcionNuevo.Text.Trim() == ""){
+            if (txbDescripcionNuevo.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar la descripcion");
                 return;
             }
 
-            if (txbPrecioCompraNuevo.Text.Trim() == ""){
+            if (txbPrecioCompraNuevo.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar el precio de compra");
                 return;
             }
 
-            if (txbPrecioVentaNuevo.Text.Trim() == ""){
+            if (txbPrecioVentaNuevo.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar el precio de venta");
                 return;
             }
 
-            if (txbCantidadNuevo.Text.Trim() == ""){
+            if (txbCantidadNuevo.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar la cantidad");
                 return;
             }
@@ -148,13 +148,13 @@ namespace AWF.Presentation.Formularios
             decimal preciocompra = 0;
             decimal precioventa  = 0;
 
-            if (!decimal.TryParse(txbPrecioCompraNuevo.Text, out preciocompra)){
+            if (!decimal.TryParse(txbPrecioCompraNuevo.Text, out preciocompra)) {
                 MessageBox.Show("Precio compra - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txbPrecioCompraNuevo.Select();
                 return;
             }
 
-            if (!decimal.TryParse(txbPrecioVentaNuevo.Text, out precioventa)){
+            if (!decimal.TryParse(txbPrecioVentaNuevo.Text, out precioventa)) {
                 MessageBox.Show("Precio venta - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txbPrecioVentaNuevo.Select();
                 return;
@@ -171,18 +171,16 @@ namespace AWF.Presentation.Formularios
 
             var response = await _productoService.Crear(objecto);
 
-            if (response != ""){
+            if (!string.IsNullOrEmpty(response))
                 MessageBox.Show(response);
-            } else {
+            else 
                 await MostrarProductos();
                 MostrarTab(tabLista.Name);
-            }
         }
 
         private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dgvProductos.Columns[e.ColumnIndex].Name == "ColumnaAccion")
-            {
+            if(dgvProductos.Columns[e.ColumnIndex].Name == "ColumnaAccion") {
                 var productoSeleccionado = (ProductoVM)dgvProductos.CurrentRow.DataBoundItem;
 
                 cbbCategoriaEditar.EstablecerValor(productoSeleccionado.IdCategoria);
@@ -205,27 +203,27 @@ namespace AWF.Presentation.Formularios
 
         private async void btnGuardarEditar_Click(object sender, EventArgs e)
         {
-           if (txbCodigoEditar.Text.Trim() == ""){
+           if (txbCodigoEditar.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar el codigo");
                 return;
             }
 
-            if (txbDescripcionEditar.Text.Trim() == ""){
+            if (txbDescripcionEditar.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar la descripcion");
                 return;
             }
 
-            if (txbPrecioCompraEditar.Text.Trim() == ""){
+            if (txbPrecioCompraEditar.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar el precio de compra");
                 return;
             }
 
-            if (txbPrecioVentaEditar.Text.Trim() == ""){
+            if (txbPrecioVentaEditar.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar el precio de venta");
                 return;
             }
 
-            if (txbCantidadEditar.Text.Trim() == ""){
+            if (txbCantidadEditar.Text.Trim() == "") {
                 MessageBox.Show("Debe ingresar la cantidad");
                 return;
             }
@@ -233,13 +231,13 @@ namespace AWF.Presentation.Formularios
             decimal preciocompra = 0;
             decimal precioventa  = 0;
 
-            if (!decimal.TryParse(txbPrecioCompraEditar.Text, out preciocompra)){
+            if (!decimal.TryParse(txbPrecioCompraEditar.Text, out preciocompra)) {
                 MessageBox.Show("Precio compra - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txbPrecioCompraEditar.Select();
                 return;
             }
 
-            if (!decimal.TryParse(txbPrecioVentaEditar.Text, out precioventa)){
+            if (!decimal.TryParse(txbPrecioVentaEditar.Text, out precioventa)) {
                 MessageBox.Show("Precio venta - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txbPrecioVentaEditar.Select();
                 return;
@@ -259,12 +257,11 @@ namespace AWF.Presentation.Formularios
 
             var response = await _productoService.Editar(objecto);
 
-            if (response != ""){
+            if (!string.IsNullOrEmpty(response))
                 MessageBox.Show(response);
-            } else {
+            else
                 await MostrarProductos();
                 MostrarTab(tabLista.Name);
-            }
         }
 
 

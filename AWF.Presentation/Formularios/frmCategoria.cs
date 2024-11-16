@@ -44,8 +44,7 @@ namespace AWF.Presentation.Formularios
         {
             var listaCategorias = await _categoriaService.Lista(buscar);
 
-            var listaVM = listaCategorias.Select(item => new CategoriaVM
-            {
+            var listaVM = listaCategorias.Select(item => new CategoriaVM {
                 IdCategoria = item.IdCategoria,
                 Nombre      = item.Nombre,
                 IdMedida    = item.RefMedida!.IdMedida,
@@ -117,18 +116,17 @@ namespace AWF.Presentation.Formularios
             };
 
             var response = await _categoriaService.Crear(objeto);
-            if (response != "") {
+
+            if (response != "") 
                 MessageBox.Show(response);
-            } else {
+            else 
                 await MostrarCategorias();
                 MostrarTab(tabLista.Name);
-            }
         }
 
         private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvCategorias.Columns[e.ColumnIndex].Name == "ColumnaAccion")
-            {
+            if (dgvCategorias.Columns[e.ColumnIndex].Name == "ColumnaAccion") {
                 var categoriaSeleccionada = (CategoriaVM)dgvCategorias.CurrentRow.DataBoundItem;
 
                 txbNombreEditar.Text = categoriaSeleccionada.Nombre!.ToString();
@@ -161,12 +159,12 @@ namespace AWF.Presentation.Formularios
             };
 
             var response = await _categoriaService.Editar(objeto);
-            if (response != "") {
+
+            if (!string.IsNullOrEmpty(response))
                 MessageBox.Show(response);
-            } else {
+            else
                 await MostrarCategorias();
                 MostrarTab(tabLista.Name);
-            }
         }
 
     }

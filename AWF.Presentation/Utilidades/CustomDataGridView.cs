@@ -27,17 +27,17 @@ namespace AWF.Presentation.Utilidades
                 SelectionBackColor = Color.FromArgb(191, 176, 209),
                 SelectionForeColor = Color.FromArgb(0, 0, 0)
             };
-            dataGrid.ColumnHeadersHeight       = 30;
-            dataGrid.EnableHeadersVisualStyles = false;
+            dataGrid.ColumnHeadersHeight         = 30;
+            dataGrid.EnableHeadersVisualStyles   = false;
             dataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
 
-            if(txtEnBoton != ""){
+            if(!string.IsNullOrEmpty(txtEnBoton)){
                 var btnEditarColumn = new DataGridViewButtonColumn();
-                btnEditarColumn.Text       = txtEnBoton;
-                btnEditarColumn.Name       = "ColumnaAccion";
-                btnEditarColumn.HeaderText = "";
+                btnEditarColumn.Text         = txtEnBoton;
+                btnEditarColumn.Name         = "ColumnaAccion";
+                btnEditarColumn.HeaderText   = "";
                 btnEditarColumn.UseColumnTextForButtonValue = true;
-                btnEditarColumn.Width      = 50;
+                btnEditarColumn.Width        = 50;
                 btnEditarColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
 
                 dataGrid.Columns.Add(btnEditarColumn);

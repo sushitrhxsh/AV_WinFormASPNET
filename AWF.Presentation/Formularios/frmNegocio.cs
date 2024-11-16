@@ -41,7 +41,7 @@ namespace AWF.Presentation.Formularios
             txbCorreo.Text        = _negocio.Correo;
             txbSimboloMoneda.Text = _negocio.SimboloMoneda;
 
-            if (_negocio.UrlLogo != "")
+            if (!string.IsNullOrEmpty(_negocio.UrlLogo))
                 pbLogo.ImageLocation = _negocio.UrlLogo;
 
         }
@@ -61,11 +61,12 @@ namespace AWF.Presentation.Formularios
             CloudinaryResponse cloudinaryResponse = new CloudinaryResponse();
             Negocio objeto = new Negocio();
 
-            if(_openFileDialog.FileName != ""){
+            if(!string.IsNullOrEmpty(_openFileDialog.FileName)) {
                 cloudinaryResponse = await _cloudinaryService.SubirImagen(_openFileDialog.SafeFileName,_openFileDialog.OpenFile());
 
-                if(cloudinaryResponse.PublicId != ""){
-                    if(_negocio.NombreLogo != "")
+                if(!string.IsNullOrEmpty(cloudinaryResponse.PublicId)) {
+
+                    if(!string.IsNullOrEmpty(_negocio.NombreLogo))
                         await _cloudinaryService.EliminarImagen(_negocio.NombreLogo!);
                     
                     objeto.NombreLogo = cloudinaryResponse.PublicId;

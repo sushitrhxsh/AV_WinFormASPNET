@@ -7,14 +7,13 @@ namespace AWF.Presentation.Utilidades
         {
             textbox.KeyPress += (sender, e) => 
             {
-                if(char.IsDigit(e.KeyChar)){
+                if(char.IsDigit(e.KeyChar))
                     e.Handled = false;
-                } else {
+                else 
                     if(char.IsControl(e.KeyChar) || e.KeyChar.ToString() == ".")
                         e.Handled = false;
                     else 
                         e.Handled = true;
-                }
             };
         }
     }

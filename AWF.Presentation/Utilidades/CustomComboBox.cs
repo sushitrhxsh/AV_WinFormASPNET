@@ -1,4 +1,3 @@
-
 using AWF.Presentation.Utilidades.Objetos;
 
 namespace AWF.Presentation.Utilidades
@@ -18,10 +17,8 @@ namespace AWF.Presentation.Utilidades
             foreach (OpcionCombo opcion in combo.Items)
             {
                 if (opcion.Valor == valor)
-                {
                     combo.SelectedItem = opcion;
                     break;
-                }
             }
         }
     }

@@ -28,7 +28,6 @@ namespace AWF.Repository.Implementation
                 using(var dr = await cmd.ExecuteReaderAsync())
                 {
                     if(await dr.ReadAsync())
-                    {
                         lista = new Negocio(){
                             RazonSocial   = dr["RazonSocial"].ToString(),
                             RFC           = dr["RFC"].ToString(),
@@ -39,7 +38,6 @@ namespace AWF.Repository.Implementation
                             NombreLogo    = dr["NombreLogo"].ToString(),
                             UrlLogo       = dr["UrlLogo"].ToString()
                         };
-                    }
                 }
             }
             return lista;

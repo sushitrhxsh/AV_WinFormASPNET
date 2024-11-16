@@ -8,7 +8,6 @@ namespace AWF.Services.Implementation
     {
 
         private readonly IRolRepository _rolRepository;
-
         public RolService(IRolRepository rolRepository)
         {
             _rolRepository = rolRepository;

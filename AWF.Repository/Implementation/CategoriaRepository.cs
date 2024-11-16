@@ -63,6 +63,7 @@ namespace AWF.Repository.Implementation
                 try {
                     await cmd.ExecuteNonQueryAsync();
                     response = Convert.ToString(cmd.Parameters["@MsjError"].Value)!;
+
                 } catch {
                     response = "Error(rp): No se pudo procesar";
                 }
@@ -90,6 +91,7 @@ namespace AWF.Repository.Implementation
                 try {
                     await cmd.ExecuteNonQueryAsync();
                     response = Convert.ToString(cmd.Parameters["@MsjError"].Value)!;
+                    
                 } catch {
                     response = "Error(rp): No se pudo procesar";
                 }

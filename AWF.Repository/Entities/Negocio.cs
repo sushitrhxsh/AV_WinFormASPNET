@@ -1,5 +1,4 @@
 
-
 namespace AWF.Repository.Entities
 {
     public class Negocio
