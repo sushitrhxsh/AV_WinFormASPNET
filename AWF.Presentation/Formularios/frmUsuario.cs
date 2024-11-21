@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AWF.Presentation.Utilidades;
 using AWF.Presentation.Utilidades.Objetos;
 using AWF.Presentation.ViewModels;
+using AWF.Repository.Entities;
 using AWF.Services.Interfaces;
 
 namespace AWF.Presentation.Formularios
@@ -104,6 +105,108 @@ namespace AWF.Presentation.Formularios
         private void btnVolverNuevo_Click(object sender, EventArgs e)
         {
             MostrarTab(tabLista.Name);
+        }
+
+        private async void btnGuardarNuevo_Click(object sender, EventArgs e)
+        {
+            if (txbNombreCompletoNuevo.Text.Trim() == "") {
+                MessageBox.Show("Debes ingresar el nombre completo");
+                return;
+            }
+
+            if (txbCorreoNuevo.Text.Trim() == "") {
+                MessageBox.Show("Debes ingresar el correo");
+                return;
+            }
+
+            if (txbNombreUsuarioNuevo.Text.Trim() == "") {
+                MessageBox.Show("Debes ingresar el nombre de usuario");
+                return;
+            }
+
+            var claveGenerada = Util.GenerateCode();
+            var claveSha256   = Util.ConvertToSha256(claveGenerada);
+
+            var item   = (OpcionCombo)cbbRolNuevo.SelectedItem!;
+            var objeto = new Usuario {
+                NombreCompleto  = txbNombreCompletoNuevo.Text.Trim(),
+                Correo          = txbCorreoNuevo.Text.Trim(),
+                NombreUsuario   = txbNombreUsuarioNuevo.Text.Trim(),
+                Clave           = claveSha256,
+                RefRol          = new Rol { IdRol = item.Valor }
+            };
+
+            var response = await _usuarioService.Crear(objeto);
+            var mensaje  = $"Bienvenido<br>Su contraseña temporal es:{claveGenerada}<br>";
+
+            if (!string.IsNullOrEmpty(response)) 
+                MessageBox.Show(response);
+            else 
+                await _correoService.Enviar(objeto.Correo,"Cuenta Creada",mensaje);
+
+                await MostrarUsuarios();
+                MostrarTab(tabLista.Name);
+        }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvUsuarios.Columns[e.ColumnIndex].Name == "ColumnaAccion") {
+                var usuarioSeleccionado = (UsuarioVM)dgvUsuarios.CurrentRow.DataBoundItem;
+
+                txbNombreCompletoEditar.Text = usuarioSeleccionado.NombreCompleto!.ToString();
+                txbNombreUsuarioEditar.Text  = usuarioSeleccionado.NombreUsuario!.ToString();
+                txbCorreoEditar.Text         = usuarioSeleccionado.Correo!.ToString();
+
+                cbbRolEditar.EstablecerValor(usuarioSeleccionado.IdRol);
+                cbbHabilitado.EstablecerValor(usuarioSeleccionado.Activo);
+
+                MostrarTab(tabEditar.Name);
+                cbbRolEditar.Select();
+            }
+        }
+
+        private void btnVolverEditar_Click(object sender, EventArgs e)
+        {
+            MostrarTab(tabLista.Name);
+        }
+
+        private async void btnGuardarEditar_Click(object sender, EventArgs e)
+        {
+            if (txbNombreCompletoEditar.Text.Trim() == "") {
+                MessageBox.Show("Debes ingresar el nombre completo");
+                return;
+            }
+
+            if (txbCorreoEditar.Text.Trim() == "") {
+                MessageBox.Show("Debes ingresar el correo");
+                return;
+            }
+
+            if (txbNombreUsuarioEditar.Text.Trim() == "") {
+                MessageBox.Show("Debes ingresar el nombre de usuario");
+                return;
+            }
+
+            var usuarioSeleccionado = (UsuarioVM)dgvUsuarios.CurrentRow.DataBoundItem;
+
+            var item   = (OpcionCombo)cbbRolEditar.SelectedItem!;
+            var item2  = (OpcionCombo)cbbHabilitado.SelectedItem!;
+            var objeto = new Usuario {
+                IdUsuario       = usuarioSeleccionado.IdUsuario,
+                NombreCompleto  = txbNombreCompletoEditar.Text.Trim(),
+                Correo          = txbCorreoEditar.Text.Trim(),
+                NombreUsuario   = txbNombreUsuarioEditar.Text.Trim(),
+                RefRol          = new Rol { IdRol = item.Valor },
+                Activo          = item2.Valor
+            };
+
+            var response = await _usuarioService.Editar(objeto);
+
+            if (!string.IsNullOrEmpty(response)) 
+                MessageBox.Show(response);
+            else 
+                await MostrarUsuarios();
+                MostrarTab(tabLista.Name);
         }
 
     }

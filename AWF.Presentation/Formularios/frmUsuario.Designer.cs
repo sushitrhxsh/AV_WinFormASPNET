@@ -95,6 +95,7 @@
             btnGuardarEditar.TabIndex = 11;
             btnGuardarEditar.Text = "Guardar";
             btnGuardarEditar.UseVisualStyleBackColor = true;
+            btnGuardarEditar.Click += btnGuardarEditar_Click;
             // 
             // btnVolverEditar
             // 
@@ -106,6 +107,7 @@
             btnVolverEditar.TabIndex = 10;
             btnVolverEditar.Text = "Volver";
             btnVolverEditar.UseVisualStyleBackColor = true;
+            btnVolverEditar.Click += btnVolverEditar_Click;
             // 
             // btnGuardarNuevo
             // 
@@ -118,6 +120,7 @@
             btnGuardarNuevo.TabIndex = 5;
             btnGuardarNuevo.Text = "Guardar";
             btnGuardarNuevo.UseVisualStyleBackColor = true;
+            btnGuardarNuevo.Click += btnGuardarNuevo_Click;
             // 
             // btnVolverNuevo
             // 
@@ -258,6 +261,7 @@
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.Size = new Size(687, 255);
             dgvUsuarios.TabIndex = 3;
+            dgvUsuarios.CellContentClick += dgvUsuarios_CellContentClick;
             // 
             // btnBuscar
             // 
