@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWF.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ed3d012f7776be3a20052e554f2f93920154831")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49a77170554f561381bcc42baf96f79f6c14df1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWF.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWF.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

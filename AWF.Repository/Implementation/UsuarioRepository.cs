@@ -30,9 +30,9 @@ namespace AWF.Repository.Implementation
                 {
                     while(await dr.ReadAsync())
                     {
-                        lista.Add(new Usuario{
+                        lista.Add(new Usuario {
                             IdUsuario       = Convert.ToInt32(dr["IdUsuario"]),
-                            RefRol = new Rol{
+                            RefRol = new Rol {
                                 IdRol   = Convert.ToInt32(dr["IdRol"]),
                                 Nombre  = dr["NombreRol"].ToString()
                             },

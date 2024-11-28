@@ -33,7 +33,7 @@ namespace AWF.Services.Implementation
 
             var uploadResult = await _cloudinary.UploadAsync(uploadParams);
 
-            if(uploadResult.StatusCode == HttpStatusCode.OK){
+            if(uploadResult.StatusCode == HttpStatusCode.OK) {
                 cloudinaryResponse.PublicId  = uploadResult.PublicId;
                 cloudinaryResponse.SecureUrl = uploadResult.SecureUrl.ToString();
             } else {

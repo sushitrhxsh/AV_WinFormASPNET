@@ -111,5 +111,38 @@ namespace AWF.Repository.Implementation
             return response;
         }
 
+        public async Task<Producto> Obtener(string codigo)
+        {
+            Producto objeto = new Producto();
+
+            using(var conn = _conexion.ObtenerSQLConexion())
+            {
+                conn.Open();
+                var cmd = new SqlCommand("sp_obtenerProducto",conn);
+                cmd.Parameters.AddWithValue("@Codigo",codigo);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using(var dr = await cmd.ExecuteReaderAsync())
+                {
+                    if(await dr.ReadAsync())
+                        objeto = new Producto {
+                            IdProducto   = Convert.ToInt32(dr["IdProducto"]),
+                            RefCategoria = new Categoria {
+                                Nombre          = dr["NombreCategoria"].ToString(),
+                                RefMedida = new Medida {
+                                    Equivalente = dr["Equivalente"].ToString(),
+                                    Valor       = Convert.ToInt32(dr["Valor"]),
+                                }
+                            },
+                            Codigo       = dr["Codigo"].ToString(),
+                            Descripcion  = dr["Descripcion"].ToString(),
+                            PrecioVenta  = Convert.ToDecimal(dr["PrecioVenta"]),
+                            Cantidad     = Convert.ToInt32(dr["Cantidad"]),
+                        };
+                }
+            }
+            return objeto;
+        }
+
     }
 }

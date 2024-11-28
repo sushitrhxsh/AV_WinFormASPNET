@@ -29,7 +29,7 @@ namespace AWF.Repository.Implementation
                 {
                     while(await dr.ReadAsync())
                     {
-                        lista.Add(new Medida{
+                        lista.Add(new Medida {
                             IdMedida    = Convert.ToInt32(dr["IdMedida"]),
                             Nombre      = dr["Nombre"].ToString(),
                             Abreviatura = dr["Abreviatura"].ToString(),

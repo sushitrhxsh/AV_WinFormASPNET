@@ -30,11 +30,11 @@ namespace AWF.Repository.Implementation
                 {
                     while(await dr.ReadAsync())
                     {
-                        lista.Add(new Categoria{
+                        lista.Add(new Categoria {
                             IdCategoria = Convert.ToInt32(dr["IdCategoria"]),
                             Nombre      = dr["Nombre"].ToString(),
                             Activo      = Convert.ToInt32(dr["Activo"]),
-                            RefMedida   = new Medida{
+                            RefMedida   = new Medida {
                                 IdMedida = Convert.ToInt32(dr["IdMedida"]),
                                 Nombre   = dr["NombreMedida"].ToString()
                             }

@@ -16,6 +16,7 @@ namespace AWF.Services
             services.AddTransient<IRolService,        RolService>();
             services.AddTransient<IUsuarioService,    UsuarioService>();
             services.AddTransient<ICorreoService,     CorreoService>();
+            services.AddTransient<IVentaService,      VentaService>();
         }
     }
 }

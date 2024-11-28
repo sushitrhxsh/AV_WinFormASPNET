@@ -7,5 +7,6 @@ namespace AWF.Services.Interfaces
         Task<List<Producto>> Lista(string buscar = "");
         Task<string> Crear(Producto modelo);
         Task<string> Editar(Producto modelo);
+        Task<Producto> Obtener(string codigo);
     }
 }

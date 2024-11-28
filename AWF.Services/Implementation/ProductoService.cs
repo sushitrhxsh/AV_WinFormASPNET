@@ -30,6 +30,12 @@ namespace AWF.Services.Implementation
             var resultado = await _productoRepository.Editar(modelo);
             return resultado;
         }
+
+        public async Task<Producto> Obtener(string codigo)
+        {
+            var resultado = await _productoRepository.Obtener(codigo);
+            return resultado;
+        }
         
     }
 }

@@ -16,6 +16,7 @@ namespace AWF.Repository
             services.AddTransient<INegocioRepository,   NegocioRepository>();
             services.AddTransient<IRolRepository,       RolRepository>();
             services.AddTransient<IUsuarioRepository,   UsuarioRepository>();
+            services.AddTransient<IVentaRepository,     VentaRepository>();
         }
     }
 }

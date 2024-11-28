@@ -10,7 +10,6 @@ namespace AWF.Repository.Implementation
     {
 
         private readonly Conexion _conexion;
-
         public RolRepository(Conexion conexion)
         {
             _conexion = conexion;
@@ -30,7 +29,7 @@ namespace AWF.Repository.Implementation
                 {
                     while(await dr.ReadAsync())
                     {
-                        lista.Add(new Rol{
+                        lista.Add(new Rol {
                             IdRol   = Convert.ToInt32(dr["IdRol"]),
                             Nombre  = dr["Nombre"].ToString()
                         });
