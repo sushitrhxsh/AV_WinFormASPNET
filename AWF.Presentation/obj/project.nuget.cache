@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A9ZOKL9RIY8=",
+  "dgSpecHash": "Y/VK51uM/wE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\awf.presentation\\AWF.Presentation.csproj",
+  "projectFilePath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\AWF.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex FS\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
@@ -55,6 +55,7 @@
     "C:\\Users\\Alex FS\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\microsoft.web.webview2.1.0.864.35.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\mimekit\\4.7.1\\mimekit.4.7.1.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Alex FS\\.nuget\\packages\\questpdf\\2024.7.2\\questpdf.2024.7.2.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

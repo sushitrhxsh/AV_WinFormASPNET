@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AWF.Presentation
-build_property.ProjectDir = C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\
+build_property.ProjectDir = C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\AWF.Presentation\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

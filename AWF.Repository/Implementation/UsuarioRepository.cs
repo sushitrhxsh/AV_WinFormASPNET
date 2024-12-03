@@ -56,7 +56,7 @@ namespace AWF.Repository.Implementation
                 conn.Open();
                 var cmd = new SqlCommand("sp_crearUsuario",conn);
 
-                cmd.Parameters.AddWithValue("@IdRol",          modelo.RefRol!.IdRol);
+                cmd.Parameters.AddWithValue("@IdRol",           modelo.RefRol!.IdRol);
                 cmd.Parameters.AddWithValue("@NombreCompleto",  modelo.NombreCompleto);
                 cmd.Parameters.AddWithValue("@Correo",          modelo.Correo);
                 cmd.Parameters.AddWithValue("@NombreUsuario",   modelo.NombreUsuario);

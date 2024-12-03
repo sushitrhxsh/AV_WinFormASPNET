@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWF.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49a77170554f561381bcc42baf96f79f6c14df1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78acf86220bf6b38592cf9d12b675520f001d8ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWF.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWF.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
