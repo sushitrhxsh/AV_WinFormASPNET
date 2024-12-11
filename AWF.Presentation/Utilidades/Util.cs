@@ -34,11 +34,11 @@ namespace AWF.Presentation.Utilidades
             }
         }
 
-        /*public static byte[] GeneratePDFVenta(Negocio oNegocio, Venta oVenta, Stream imageLogo)
+        public static byte[] GeneratePDFVenta(Negocio oNegocio, Venta oVenta, Stream imageLogo)
         {
             QuestPDF.Settings.License = LicenseType.Community;
 
-            Document.Create(document => 
+            var arrayPDF = Document.Create(document => 
             {
                 document.Page(page => {
                     page.Margin(30);
@@ -96,14 +96,34 @@ namespace AWF.Presentation.Utilidades
                                 header.Cell().Background("#634883").Padding(2).Text("Total").FontColor("#fff");
                             });
 
+                            foreach(DetalleVenta item in oVenta.RefDetalleVenta!)
+                            {
+                                decimal cantidad = Convert.ToDecimal(item.Cantidad) / Convert.ToDecimal(item.RefProducto?.RefCategoria?.RefMedida?.Valor);
+                                string abreviatura = item.RefProducto?.RefCategoria?.RefMedida?.Abreviatura!;
+
+                                table.Cell().BorderBottom(0.5f).BorderColor("#D9D9D9").Padding(2).Text(item.RefProducto!.Descripcion).FontSize(10);
+                                table.Cell().BorderBottom(0.5f).BorderColor("#D9D9D9").Padding(2).Text($"{oNegocio.SimboloMoneda} {item.PrecioVenta.ToString("0.00")}").FontSize(10);
+                                table.Cell().BorderBottom(0.5f).BorderColor("#D9D9D9").Padding(2).Text($"{cantidad.ToString()} {abreviatura}").FontSize(10);
+                                table.Cell().BorderBottom(0.5f).BorderColor("#D9D9D9").Padding(2).Text($"{oNegocio.SimboloMoneda} {item.PrecioTotal}").FontSize(10);
+                            }
                         });
+
+                        col.Item().AlignRight().Text($"{oNegocio.SimboloMoneda} {oVenta.PrecioTotal.ToString("0.00")}").FontSize(10);
 
                     });
 
+                    page.Footer().AlignRight().Text(txt => {
+                        txt.Span("Pagina").FontSize(10);
+                        txt.CurrentPageNumber().FontSize(10);
+                        txt.Span(" de ").FontSize(10);
+                        txt.TotalPages().FontSize(10);
+                    });
                 });
-            });
+            })
+            .GeneratePdf();
 
-        }*/
+            return arrayPDF;
+        }
 
     }
 }

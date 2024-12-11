@@ -129,6 +129,7 @@
             txbCodigoProducto.Name = "txbCodigoProducto";
             txbCodigoProducto.Size = new Size(453, 23);
             txbCodigoProducto.TabIndex = 23;
+            txbCodigoProducto.KeyDown += txbCodigoProducto_KeyDown;
             // 
             // label3
             // 
@@ -221,6 +222,7 @@
             Name = "frmVenta";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmVenta";
+            Load += frmVenta_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDetalleVenta).EndInit();
             ResumeLayout(false);
             PerformLayout();
