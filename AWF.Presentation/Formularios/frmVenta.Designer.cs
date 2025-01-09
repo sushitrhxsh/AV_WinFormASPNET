@@ -58,6 +58,7 @@
             btnGuardar.TabIndex = 38;
             btnGuardar.Text = "Registrar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnBuscar
             // 
@@ -70,6 +71,7 @@
             btnBuscar.TabIndex = 36;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // txbPagoCon
             // 
@@ -78,6 +80,7 @@
             txbPagoCon.ReadOnly = true;
             txbPagoCon.Size = new Size(147, 23);
             txbPagoCon.TabIndex = 31;
+            txbPagoCon.KeyDown += txbPagoCon_KeyDown;
             // 
             // label7
             // 
@@ -184,6 +187,7 @@
             dgvDetalleVenta.Name = "dgvDetalleVenta";
             dgvDetalleVenta.Size = new Size(701, 152);
             dgvDetalleVenta.TabIndex = 41;
+            dgvDetalleVenta.CellContentClick += dgvDetalleVenta_CellContentClick;
             // 
             // label9
             // 

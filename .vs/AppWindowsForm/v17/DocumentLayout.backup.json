@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8198D3A3-2A7B-4A86-9179-062627D1D0E8}|AWF.Services\\AWF.Services.csproj|c:\\users\\alex fs\\documents\\programacion\\.net\\windowform\\appwindowsform\\awf.services\\implementation\\correoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8198D3A3-2A7B-4A86-9179-062627D1D0E8}|AWF.Services\\AWF.Services.csproj|solutionrelative:awf.services\\implementation\\correoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|c:\\users\\alex fs\\documents\\programacion\\.net\\windowform\\appwindowsform\\awf.presentation\\formularios\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|solutionrelative:awf.presentation\\formularios\\frmusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|c:\\users\\alex fs\\documents\\programacion\\.net\\windowform\\appwindowsform\\awf.presentation\\formularios\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{347CEFEA-8313-49BB-98D0-CA283F424322}|AWF.Presentation\\AWF.Presentation.csproj|solutionrelative:awf.presentation\\formularios\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CorreoService.cs",
-              "DocumentMoniker": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\Implementation\\CorreoService.cs",
-              "RelativeDocumentMoniker": "AWF.Services\\Implementation\\CorreoService.cs",
-              "ToolTip": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\Implementation\\CorreoService.cs",
-              "RelativeToolTip": "AWF.Services\\Implementation\\CorreoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Title": "frmVenta.cs",
+              "DocumentMoniker": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmVenta.cs",
+              "RelativeDocumentMoniker": "AWF.Presentation\\Formularios\\frmVenta.cs",
+              "ToolTip": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmVenta.cs",
+              "RelativeToolTip": "AWF.Presentation\\Formularios\\frmVenta.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T18:09:48.964Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmUsuario.cs",
-              "RelativeDocumentMoniker": "AWF.Presentation\\Formularios\\frmUsuario.cs",
-              "ToolTip": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\Formularios\\frmUsuario.cs",
-              "RelativeToolTip": "AWF.Presentation\\Formularios\\frmUsuario.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAkwFwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T18:04:01.099Z",
+              "WhenOpened": "2024-12-02T21:54:15.02Z",
               "EditorCaption": ""
             }
           ]

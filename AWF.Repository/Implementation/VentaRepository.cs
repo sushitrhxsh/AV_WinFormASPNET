@@ -62,7 +62,7 @@ namespace AWF.Repository.Implementation
                             },
                             NombreCliente   = dr["NombreUsuario"].ToString(),
                             PrecioTotal     = Convert.ToDecimal(dr["PrecioTotal"]),
-                            PagoCon         = Convert.ToDecimal(dr["PagpCon"]),
+                            PagoCon         = Convert.ToDecimal(dr["PagoCon"]),
                             Cambio          = Convert.ToDecimal(dr["Cambio"]),
                             FechaRegistro   = dr["FechaRegistro"].ToString()
                         };

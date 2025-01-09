@@ -12,6 +12,10 @@ using AWF.Presentation.Utilidades;
 using AWF.Presentation.ViewModels;
 using AWF.Repository.Entities;
 using AWF.Services.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
+using System.Numerics;
+using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace AWF.Presentation.Formularios
 {
@@ -98,7 +102,7 @@ namespace AWF.Presentation.Formularios
                 int cantidadTotal = encontrado.CantidadValor + cantidad;
                 decimal total = (cantidadTotal * producto.PrecioVenta)/producto.RefCategoria.RefMedida.Valor;
 
-                encontrado.CantidadValor += cantidadTotal;
+                encontrado.CantidadValor = cantidadTotal;
                 encontrado.CantidadTexto = string.Concat(cantidadTotal + "" + producto.RefCategoria.RefMedida.Equivalente);
                 encontrado.Total         = Convert.ToDecimal(total.ToString("0.00"));
                 _detalleVenta[index] = encontrado;
@@ -114,6 +118,141 @@ namespace AWF.Presentation.Formularios
             if(e.KeyData == Keys.Enter)
                 await AgregarProducto(txbCodigoProducto.Text.Trim());
         }
+
+        private async void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var _formBuscarProducto = _serviceProvider.GetRequiredService<frmBuscarProducto>();
+            var result = _formBuscarProducto.ShowDialog();
+
+            if(result == DialogResult.OK) {
+                var productoSeleccionado = _formBuscarProducto._productoSeleccionado;
+                txbCodigoProducto.Text   = productoSeleccionado.Codigo;
+
+                await AgregarProducto(productoSeleccionado.Codigo!);
+            }
+        }
+
+        private void dgvDetalleVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvDetalleVenta.Columns[e.ColumnIndex].Name == "ColumnaAccion") {
+                var filaSeleccionada = (DetalleVentaVM) dgvDetalleVenta.CurrentRow.DataBoundItem;
+
+                var index = _detalleVenta.IndexOf(filaSeleccionada);
+                _detalleVenta.RemoveAt(index);
+                
+                decimal Total = _detalleVenta.Sum(x => x.Total);
+                label9.Text   = Total.ToString("0.00");   
+            }
+        } 
+
+        private async void btnGuardar_Click(object sender,EventArgs e)
+        {
+            if(_detalleVenta.Count == 0) {
+                MessageBox.Show("No hay productos");
+                return;
+            }
+
+            decimal tempTotal = _detalleVenta.Sum(x => x.Total);
+            var precioTotal   = Convert.ToDecimal(tempTotal.ToString("0.00"));
+
+            var pagoCon       = txbPagoCon.Text.Trim() == "" ? precioTotal : Convert.ToDecimal(txbPagoCon.Text.Trim());
+            var cambio        = txbCambio.Text.Trim() == "" ? 0 : Convert.ToDecimal(txbCambio.Text.Trim());
+
+            //TODO: Ingresar el id del usuario logueado
+            XElement venta = new XElement("Venta",
+                new XElement("IdUsuarioRegistro", 1),
+                new XElement("NombreCliente", txbNombreCliente.Text.Trim()),
+                new XElement("PrecioTotal",   precioTotal),
+                new XElement("PagoCon",       pagoCon),
+                new XElement("Cambio",        cambio)
+            );
+
+            XElement detalleventa = new XElement("DetalleVenta");
+            foreach(var item in _detalleVenta) {
+                detalleventa.Add(new XElement("Item",
+                    new XElement("IdProducto",  item.IdProducto),
+                    new XElement("Cantidad",    item.CantidadValor),
+                    new XElement("PrecioVenta", item.Precio),
+                    new XElement("PrecioTotal", item.Total)
+                ));
+            }
+
+            venta.Add(detalleventa);
+
+            var numeroVenta = await _ventaService.Registrar(venta.ToString());
+            if(numeroVenta == "") {
+                MessageBox.Show("No se pudo registrar la venta");
+                return;
+            }
+
+            txbCodigoProducto.Text  = "";
+            txbNombreCliente.Text   = "";
+            _detalleVenta.Clear();
+            label9.Text             = "0";
+            txbPagoCon.Text         = "";
+            txbCambio.Text          = "";
+            txbCodigoProducto.Select();
+
+            DialogResult result = MessageBox.Show(
+                $"Numero de venta:{numeroVenta}\n¿Desea guardar y visualizar el documento?",
+                "Venta registrada correctamente",MessageBoxButtons.YesNo, MessageBoxIcon.Information
+            );
+
+            if(result == DialogResult.Yes) {
+                var oNegocio           = await _negocioService.Obtener();
+                var oVenta             = await _ventaService.Obtener(numeroVenta);
+                var oDetalleVenta      = await _ventaService.ObtenerDetalle(numeroVenta);
+                oVenta.RefDetalleVenta = oDetalleVenta;
+
+                MemoryStream imagenLogo;
+                using(var httpClient = new HttpClient()) {
+                    var imgBytes = await httpClient.GetByteArrayAsync(oNegocio.UrlLogo);
+                    imagenLogo   = new MemoryStream(imgBytes);
+                }
+
+                var arrayPdf = Util.GeneratePDFVenta(oNegocio,oVenta,imagenLogo);
+
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog()) {
+                    saveFileDialog.Filter       = "PDF Files (*.pdf)|*.pdf";
+                    saveFileDialog.Title        = "Guardar PDF";
+                    saveFileDialog.DefaultExt   = "pdf";
+                    saveFileDialog.AddExtension = true;
+                    saveFileDialog.FileName     = $"Venta_{numeroVenta}.pdf";
+
+                    if(saveFileDialog.ShowDialog() == DialogResult.OK)
+                        await File.WriteAllBytesAsync(saveFileDialog.FileName,arrayPdf);
+                        Process.Start(new ProcessStartInfo {
+                            FileName        = saveFileDialog.FileName,
+                            UseShellExecute = true
+                        });
+                };
+            }
+        }
+
+        private void txbPagoCon_KeyDown(Object sender, KeyEventArgs e)
+        {
+            if(e.KeyData != Keys.Enter)
+                return;
+            
+            decimal pagoCon;
+            decimal total = _detalleVenta.Sum(x => x.Total);
+
+            if(txbPagoCon.Text.Trim() != "")
+                if(decimal.TryParse(txbPagoCon.Text.Trim(),out pagoCon)){
+                    if(pagoCon < total) {
+                        txbCambio.Text = "0.00";
+                        
+                    } else {
+                        decimal cambio = pagoCon - total;
+                        txbCambio.Text = cambio.ToString("0.00");
+                    }
+
+                } else {
+                    MessageBox.Show("El valor ingresado no es valido");
+                }
+            
+        }
+
 
     }
 }
