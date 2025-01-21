@@ -195,7 +195,8 @@ namespace AWF.Presentation.Formularios
 
             DialogResult result = MessageBox.Show(
                 $"Numero de venta:{numeroVenta}\n¿Desea guardar y visualizar el documento?",
-                "Venta registrada correctamente",MessageBoxButtons.YesNo, MessageBoxIcon.Information
+                "Venta registrada correctamente",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information
             );
 
             if(result == DialogResult.Yes) {
