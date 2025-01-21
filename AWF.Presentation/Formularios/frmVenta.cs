@@ -143,8 +143,9 @@ namespace AWF.Presentation.Formularios
                 decimal Total = _detalleVenta.Sum(x => x.Total);
                 label9.Text   = Total.ToString("0.00");   
             }
-        } 
+        }
 
+        [Obsolete]
         private async void btnGuardar_Click(object sender,EventArgs e)
         {
             if(_detalleVenta.Count == 0) {

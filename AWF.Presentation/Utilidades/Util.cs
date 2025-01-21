@@ -34,6 +34,7 @@ namespace AWF.Presentation.Utilidades
             }
         }
 
+        [Obsolete]
         public static byte[] GeneratePDFVenta(Negocio oNegocio, Venta oVenta, Stream imageLogo)
         {
             QuestPDF.Settings.License = LicenseType.Community;

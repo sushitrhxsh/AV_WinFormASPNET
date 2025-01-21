@@ -52,6 +52,7 @@
             btnBuscar.TabIndex = 36;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // txbBuscar
             // 

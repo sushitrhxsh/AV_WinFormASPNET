@@ -36,5 +36,6 @@ namespace AWF.Services.Implementation
             var resultado = await _ventaRepository.Lista(fechaInicio, fechaFin, buscar);
             return resultado;
         }
+        
     }
 }
