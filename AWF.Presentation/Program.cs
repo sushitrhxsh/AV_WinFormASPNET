@@ -47,5 +47,6 @@ static class Program
             services.AddTransient<frmVenta>();
             services.AddTransient<frmBuscarProducto>();
             services.AddTransient<frmHistorial>();
+            services.AddTransient<frmDetalleVenta>();
         });
 }

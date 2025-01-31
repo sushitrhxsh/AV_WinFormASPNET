@@ -11,6 +11,7 @@ using AWF.Presentation.Utilidades;
 using AWF.Presentation.ViewModels;
 using AWF.Repository.Interfaces;
 using AWF.Services.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AWF.Presentation.Formularios
 {
@@ -51,6 +52,17 @@ namespace AWF.Presentation.Formularios
         private async void btnBuscar_Click(object sender, EventArgs e)
         {
             await MostrarVenta();
+        }
+
+        private void dgvVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvVenta.Columns[e.ColumnIndex].Name == "ColumnaAccion") {
+                var filaSeleccionada = (VentaVM) dgvVenta.CurrentRow.DataBoundItem;
+
+                var _formDetalle = _serviceProvider.GetRequiredService<frmDetalleVenta>();
+                _formDetalle._numeroVenta = filaSeleccionada.NumeroVenta!;  
+                _formDetalle.ShowDialog();
+            }
         }
 
     }

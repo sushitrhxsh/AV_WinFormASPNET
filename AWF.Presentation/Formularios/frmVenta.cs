@@ -27,6 +27,7 @@ namespace AWF.Presentation.Formularios
         private readonly INegocioService _negocioService;
         private readonly IServiceProvider _serviceProvider;
         private BindingList<DetalleVentaVM> _detalleVenta = new BindingList<DetalleVentaVM>();
+        [Obsolete]
         public frmVenta(IProductoService productoService, IVentaService ventaService, INegocioService negocioService, IServiceProvider serviceProvider)
         {
             InitializeComponent();
@@ -254,7 +255,6 @@ namespace AWF.Presentation.Formularios
                 }
             
         }
-
 
     }
 }

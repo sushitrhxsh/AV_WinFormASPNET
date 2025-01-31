@@ -131,6 +131,7 @@
             dgvVenta.Name = "dgvVenta";
             dgvVenta.Size = new Size(732, 260);
             dgvVenta.TabIndex = 39;
+            dgvVenta.CellContentClick += dgvVenta_CellContentClick;
             // 
             // frmHistorial
             // 
