@@ -36,6 +36,12 @@ namespace AWF.Services.Implementation
             var resultado = await _ventaRepository.Lista(fechaInicio, fechaFin, buscar);
             return resultado;
         }
+
+        public async Task<List<DetalleVenta>> Reporte(string fechaInicio, string fechaFin)
+        {
+            var resultado = await _ventaRepository.Reporte(fechaInicio, fechaFin);
+            return resultado;
+        }
         
     }
 }

@@ -133,3 +133,10 @@ C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.prese
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\obj\Debug\net8.0-windows\AWF.Presentation.pdb
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\obj\Debug\net8.0-windows\AWF.Presentation.genruntimeconfig.cache
 C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\obj\Debug\net8.0-windows\ref\AWF.Presentation.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\obj\Debug\net8.0-windows\AWF.Presentation.Formularios.frmReporte.resources
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\bin\Debug\net8.0-windows\Irony.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Users\Alex FS\Documents\programacion\.net\WindowForm\AppWindowsForm\awf.presentation\bin\Debug\net8.0-windows\XLParser.dll
