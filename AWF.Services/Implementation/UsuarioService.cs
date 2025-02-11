@@ -30,6 +30,24 @@ namespace AWF.Services.Implementation
             var resultado = await _usuarioRepository.Editar(modelo);
             return resultado;
         }
-        
+
+        public async Task<Usuario> Login(string usuario, string clave)
+        {
+            var resultado = await _usuarioRepository.Login(usuario, clave);
+            return resultado;
+        }
+
+        public Task<int> VerificarCorreo(string correo)
+        {
+            var resultado = _usuarioRepository.VerificarCorreo(correo);
+            return resultado;
+        }
+
+        public Task ActualizarClave(int idUsuario, string nuevaClave, int resetear)
+        {
+            var resultado = _usuarioRepository.ActualizarClave(idUsuario, nuevaClave, resetear);
+            return resultado;
+        }
+
     }
 }

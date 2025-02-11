@@ -106,5 +106,78 @@ namespace AWF.Repository.Implementation
             return response;
         }
 
+        public async Task<Usuario> Login(string usuario, string clave)
+        {
+            Usuario lista = new Usuario();
+
+            using(var conn = _conexion.ObtenerSQLConexion())
+            {
+                conn.Open();
+                var cmd = new SqlCommand("sp_login",conn);
+                cmd.Parameters.AddWithValue("@NombreUsuario", usuario);
+                cmd.Parameters.AddWithValue("@Clave",         clave);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using(var dr = await cmd.ExecuteReaderAsync())
+                {
+                    if(await dr.ReadAsync())
+                        lista = new Usuario() {
+                            IdUsuario       = Convert.ToInt32(dr["IdUsuario"]),
+                            NombreCompleto  = dr["NombreCompleto"].ToString(),
+                            RefRol = new Rol {
+                                IdRol   = Convert.ToInt32(dr["IdRol"]),
+                                Nombre  = dr["NombreRol"].ToString()
+                            },
+                            Correo        = dr["Correo"].ToString(),
+                            NombreUsuario = dr["NombreUsuario"].ToString(),
+                            ResetearClave = Convert.ToInt32(dr["ResetearClave"]),
+                            Activo        = Convert.ToInt32(dr["Activo"])
+                        };
+                }
+            }
+            return lista;
+        }
+
+        public async Task<int> VerificarCorreo(string correo)
+        {
+            int idUsuario;
+
+            using(var conn = _conexion.ObtenerSQLConexion())
+            {
+                conn.Open();
+                var cmd = new SqlCommand("sp_verficarCorreo",conn);
+                cmd.Parameters.AddWithValue("@Correo", correo);
+                cmd.Parameters.Add("@IdUsuario",SqlDbType.Int).Direction = ParameterDirection.Output;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                try {
+                    await cmd.ExecuteNonQueryAsync();
+                    idUsuario = Convert.ToInt32(cmd.Parameters["@IdUsuario"].Value)!;    
+                } catch {
+                    idUsuario = 0;
+                }
+            }
+            return idUsuario;
+        }
+
+        public async Task ActualizarClave(int idUsuario, string nuevaClave, int resetear)
+        {
+            using(var conn = _conexion.ObtenerSQLConexion())
+            {
+                conn.Open();
+                var cmd = new SqlCommand("sp_actualizarClave",conn);
+                cmd.Parameters.AddWithValue("@IdUsuario",  idUsuario);
+                cmd.Parameters.AddWithValue("@NuevaClave", nuevaClave);
+                cmd.Parameters.AddWithValue("@Resetear",   resetear);            
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                try {
+                    await cmd.ExecuteNonQueryAsync();   
+                } catch {
+                    throw;
+                }
+            }
+        }
+
     }
 }
