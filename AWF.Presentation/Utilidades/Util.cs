@@ -18,20 +18,17 @@ namespace AWF.Presentation.Utilidades
         public static string ConvertToSha256(string text)
         {
             // Crear la instancia sha256
-            using (SHA256 sha256Hash = SHA256.Create())
+            // Convertir una cadena a un array de bytes y calcular el hash
+            byte[] bytes = SHA256.HashData(Encoding.UTF8.GetBytes(text));
+
+            // Construir el string en hash
+            var builder = new StringBuilder();
+            foreach (byte b in bytes)
             {
-                // Convertit una cadena a un array de bytes
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(text));
-
-                // Contruir el string en hash
-                StringBuilder builder = new StringBuilder();
-                for(int i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("x2"));
-                }
-
-                return builder.ToString();
+                builder.Append(b.ToString("x2"));
             }
+
+            return builder.ToString();
         }
 
         [Obsolete]

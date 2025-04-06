@@ -8216,11 +8216,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\AWF.Presentation.csproj",
+      "projectUniqueName": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\AWF.Presentation.csproj",
       "projectName": "AWF.Presentation",
-      "projectPath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\AWF.Presentation.csproj",
+      "projectPath": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\AWF.Presentation.csproj",
       "packagesPath": "C:\\Users\\Alex FS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\obj\\",
+      "outputPath": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8241,8 +8241,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\AWF.Services.csproj": {
-              "projectPath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\AWF.Services.csproj"
+            "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\AWF.Services.csproj": {
+              "projectPath": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\AWF.Services.csproj"
             }
           }
         }
@@ -8256,8 +8256,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -8295,7 +8294,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

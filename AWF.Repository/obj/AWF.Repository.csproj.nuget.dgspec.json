@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj": {}
+    "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj": {
+    "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj",
+        "projectUniqueName": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj",
         "projectName": "AWF.Repository",
-        "projectPath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj",
+        "projectPath": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj",
         "packagesPath": "C:\\Users\\Alex FS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex FS\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\obj\\",
+        "outputPath": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net8.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -43,12 +43,11 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "dependencies": {
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -79,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
