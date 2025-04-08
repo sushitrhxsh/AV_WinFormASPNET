@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using AWF.Repository.DB;
 using AWF.Repository.Entities;
+using AWF.Repository.Interfaces;
 using Microsoft.Data.SqlClient;
 
 namespace AWF.Repository.Implementation
 {
-    public class MenuRolRepository
+    public class MenuRolRepository:IMenuRolRepository
     {
 
         private readonly Conexion _conexion;
@@ -18,7 +15,7 @@ namespace AWF.Repository.Implementation
             _conexion = conexion;
         }
 
-        public async Task<List<MenuRol>> Lista(int idMenu, int idRol)
+        public async Task<List<MenuRol>> Lista(int idRol)
         {
             List<MenuRol> lista = new List<MenuRol>();
 
@@ -27,14 +24,14 @@ namespace AWF.Repository.Implementation
                 conn.Open();
                 var cmd = new SqlCommand("sp_obtenerMenus", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idMenu",  idMenu);
-                cmd.Parameters.AddWithValue("@idRol",   idRol);
+                cmd.Parameters.AddWithValue("@IdRol",   idRol);
 
                 using (var dr = await cmd.ExecuteReaderAsync())
                 {
-                    while (await dr.ReadAsync()) {
+                    while (await dr.ReadAsync()) 
+                    {
                         lista.Add(new MenuRol {
-                            NombreMenu  = Convert.ToString(dr["NombreMenu"]),
+                            NombreMenu  = dr["NombreMenu"].ToString()!,
                             IdMenuPadre = Convert.ToInt32(dr["IdMenuPadre"]),
                             Activo      = Convert.ToBoolean(dr["Activo"]),
                         });

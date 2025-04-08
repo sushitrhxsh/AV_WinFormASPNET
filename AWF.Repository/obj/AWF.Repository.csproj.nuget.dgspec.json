@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj": {}
+    "C:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj": {
+    "C:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj",
         "projectName": "AWF.Repository",
-        "projectPath": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj",
+        "projectPath": "C:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\AWF.Repository.csproj",
         "packagesPath": "C:\\Users\\Alex FS\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\obj\\",
+        "outputPath": "C:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

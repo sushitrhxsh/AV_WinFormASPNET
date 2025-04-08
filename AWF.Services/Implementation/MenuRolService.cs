@@ -1,10 +1,10 @@
-
 using AWF.Repository.Entities;
 using AWF.Repository.Interfaces;
+using AWF.Services.Interfaces;
 
 namespace AWF.Services.Implementation
 {
-    public class MenuRolService
+    public class MenuRolService:IMenuRolService
     {
         
         private readonly IMenuRolRepository _menuRolRepository;
@@ -13,9 +13,9 @@ namespace AWF.Services.Implementation
             _menuRolRepository = menuRolRepository;
         }
 
-        public async Task<List<MenuRol>> Lista(int idMenu, int idRol)
+        public async Task<List<MenuRol>> Lista(int idRol)
         {
-            var resultado = await _menuRolRepository.Lista(idMenu, idRol);
+            var resultado = await _menuRolRepository.Lista(idRol);
             return resultado;
         }
 

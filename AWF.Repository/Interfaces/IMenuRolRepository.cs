@@ -4,6 +4,6 @@ namespace AWF.Repository.Interfaces
 {
     public interface IMenuRolRepository
     {
-        Task<List<MenuRol>> Lista(int idMenu, int idRol);
+        Task<List<MenuRol>> Lista(int idRol);
     }
 }

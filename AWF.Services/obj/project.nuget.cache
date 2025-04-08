@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WysaynBV3Mc=",
+  "dgSpecHash": "e0z+XqUvJUI=",
   "success": true,
-  "projectFilePath": "c:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\AWF.Services.csproj",
+  "projectFilePath": "C:\\Users\\Alex FS\\OneDrive\\Documents\\programacion\\.net\\WindowForm\\AppWindowsForm\\AWF.Services\\AWF.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex FS\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Alex FS\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
